@@ -1,13 +1,14 @@
 class Solution {
     public int climbStairs(int n) {
-        int arr[] = new int[46];
-        arr[0] =1;
-        arr[1] =1;
-        arr[2] =2;
-        for(int i=3;i<46;i++){
-            arr[i] = arr[i-1]+arr[i-2];
+        int a =1;
+        int b =1;
+        int sum =0;
+        for(int i=1;i<=n;i++){
+            sum =a+b;
+            a = b;
+            b=sum;
         }
-        return arr[n];
+        return a;
         
     }
 }
